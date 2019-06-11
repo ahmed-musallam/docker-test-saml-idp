@@ -5,7 +5,8 @@
  * See: https://simplesamlphp.org/docs/stable/simplesamlphp-reference-sp-remote
  */
 
-$metadata[getenv('SIMPLESAMLPHP_SP_ENTITY_ID')] = array(
-    'AssertionConsumerService' => getenv('SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE'),
-    'SingleLogoutService' => getenv('SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE'),
+$metadata['http://app.example.com'] = array(
+    'AssertionConsumerService' => 'http://localhost:4502/content/saml_login',
+    'SingleLogoutService' => 'http://localhost:8080/simplesaml/module.php/saml/sp/saml2-logout.php/default-sp',
 );
+

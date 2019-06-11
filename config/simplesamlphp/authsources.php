@@ -8,6 +8,11 @@ $config = array(
 
     'example-userpass' => array(
         'exampleauth:UserPass',
+        'user:user' => array(
+            'uid' => array('3'),
+            'eduPersonAffiliation' => array('group1'),
+            'email' => 'user@example.com',
+        ),
         'user1:user1pass' => array(
             'uid' => array('1'),
             'eduPersonAffiliation' => array('group1'),
@@ -18,6 +23,11 @@ $config = array(
             'eduPersonAffiliation' => array('group2'),
             'email' => 'user2@example.com',
         ),
+    ),
+    'default-sp' => array(
+        'saml:SP',
+        'entityID' => 'http://app.example.com',
+        'RelayState' => 'http://localhost:4502',
     ),
 
 );
