@@ -8,22 +8,29 @@ $config = array(
 
     'example-userpass' => array(
         'exampleauth:UserPass',
-        'user:user' => array(
-            'uid' => array('3'),
-            'eduPersonAffiliation' => array('group1'),
-            'email' => 'user@example.com',
-        ),
         'user1:user1' => array(
-            'uid' => array('1'),
-            'eduPersonAffiliation' => array('group1'),
-            'email' => 'user1@example.com',
+            'uid' => 'user1',
+            'groups' => array('content-authors', 'contributor'),
+            'email' => 'user@example.com',
+            'firstName' => 'User1',
+            'lastName' => 'Last1',
         ),
         'user2:user2' => array(
-            'uid' => array('2'),
-            'eduPersonAffiliation' => array('group2'),
-            'email' => 'user2@example.com',
+            'uid' => 'user2',
+            'groups' => array('content-authors', 'dam-users'),
+            'email' => 'user1@example.com',
+            'firstName' => 'User2',
+            'lastName' => 'Last2',
+        ),
+        'user3:user3' => array(
+            'uid' => 'user3',
+            'groups' => array('content-authors', 'workflow-administrators'),
+            'email' => 'user3@example.com',
+            'firstName' => 'User3',
+            'lastName' => 'Last3',
         ),
     ),
+
     'default-sp' => array(
         'saml:SP',
         'entityID' => 'aem-sample-sp',
